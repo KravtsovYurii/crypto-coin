@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:crypto_coins_list/features/crypto_list/bloc/crypto_list_bloc.dart';
 import 'package:crypto_coins_list/features/crypto_list/widgets/widgets.dart';
+import 'package:crypto_coins_list/generated/l10n.dart';
 import 'package:crypto_coins_list/repositories/crypto_coins/crypto_coins.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,7 +30,7 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Crypto Currencies List'),
+        title: Text(S.of(context).cryptoCurrenciesList),
       ),
       body: RefreshIndicator(
         onRefresh: () async {
